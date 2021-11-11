@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ng-container *ngFor="let item of list">
+    <ion-item *ngIf="loginUserId != item?.id" (click)="viewUserDetails(item)">
+      <ion-label>{{item?.name}}
+        <p>{{item?.email}}</p>
+      </ion-label>
+    </ion-item>
+  </ng-container>
+</ion-content>

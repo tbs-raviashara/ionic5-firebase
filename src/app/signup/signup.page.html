@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>SignUp</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-pading">
+  <div class="form ion-padding">
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Name</ion-label>
+      <ion-input [(ngModel)]='signUpData.name'></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-no-padding ion-margin-bottom">
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input [(ngModel)]='signUpData.email'></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-no-padding ion-margin-bottom">
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" [(ngModel)]='signUpData.password'></ion-input>
+    </ion-item>
+    <ion-button (click)='signUp()' expand='block'>SignUp</ion-button>
+  </div>
+</ion-content>
